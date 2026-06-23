@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marcar Date</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+<div id="page-app" class="page active">
+
+  <!-- Overlay -->
+  <div id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-brand">
+        <svg viewBox="0 0 24 24" class="icon">
+          <path fill="currentColor" stroke="none" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        Date Planner
+      </div>
+      <button class="sidebar-close" onclick="closeSidebar()">
+        <svg viewBox="0 0 24 24" class="icon"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="marcar.html" class="sidebar-nav-item active" data-page="marcar">
+        <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg>
+        Marcar Date
+      </a>
+      <a href="ideias.html" class="sidebar-nav-item" data-page="ideias">
+        <svg viewBox="0 0 24 24" class="icon"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>
+        Ideia de Dates
+      </a>
+      <a href="calendario.html" class="sidebar-nav-item" data-page="calendario">
+        <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Calendário
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      Feito com
+      <svg viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      para vocês
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header id="main-header">
+    <div class="header-inner">
+      <button class="header-menu-btn" onclick="openSidebar()" aria-label="Abrir menu">
+        <svg viewBox="0 0 24 24" class="icon"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="header-title">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span>Marcar Date</span>
+      </div>
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main id="main-content">
+    <section id="section-marcar" class="section">
+      <div class="section-header">
+        <div class="section-icon-wrap">
+          <svg viewBox="0 0 24 24" class="icon">
+            <path fill="currentColor" stroke="none" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <h2 class="section-title">Marcar Date</h2>
+        <p class="section-subtitle">Planeje um momento especial juntos</p>
+      </div>
+
+      <div style="max-width:32rem;margin:0 auto">
+        <div class="form-group">
+          <label class="form-label">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Nome do Date
+          </label>
+          <input id="form-nome" class="form-input" type="text" placeholder="Ex: Jantar romântico na praia" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Data
+          </label>
+          <input id="form-data" class="form-input" type="date" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Período do Dia</label>
+          <div class="periodo-grid">
+            <button class="periodo-btn" data-periodo="manha" onclick="selectPeriodo('manha')">
+              <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+              Manhã
+            </button>
+            <button class="periodo-btn" data-periodo="tarde" onclick="selectPeriodo('tarde')">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M17 18a5 5 0 0 0-10 0"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"/><line x1="1" y1="18" x2="3" y2="18"/><line x1="21" y1="18" x2="23" y2="18"/><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"/></svg>
+              Tarde
+            </button>
+            <button class="periodo-btn" data-periodo="noite" onclick="selectPeriodo('noite')">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              Noite
+            </button>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Hora
+          </label>
+          <input id="form-hora" class="form-input" type="time" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Local
+          </label>
+          <input id="form-local" class="form-input" type="text" placeholder="Ex: Restaurante Il Sorrisso, São Paulo" />
+        </div>
+
+        <button class="btn-primary" onclick="submitDate()">
+          <svg viewBox="0 0 24 24"><path fill="white" stroke="none" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          Marcar Date
+        </button>
+
+        <div id="form-success" class="success-msg">
+          ✨ Date marcado com sucesso! Verifique no Calendário.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Nav -->
+  <nav id="bottom-nav">
+    <div class="bottom-nav-inner">
+      <a href="marcar.html" class="bottom-nav-item active" data-page="marcar">
+        <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg>
+        Marcar Date
+      </a>
+      <a href="ideias.html" class="bottom-nav-item" data-page="ideias">
+        <svg viewBox="0 0 24 24" class="icon"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/></svg>
+        Ideia de Dates
+      </a>
+      <a href="calendario.html" class="bottom-nav-item" data-page="calendario">
+        <svg viewBox="0 0 24 24" class="icon"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Calendário
+      </a>
+    </div>
+  </nav>
+
+</div>
+
+<script src="../js/app.js"></script>
+</body>
+</html>
