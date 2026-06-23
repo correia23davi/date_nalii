@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/html/index.html" },
+    { "source": "/marcar", "destination": "/html/marcar.html" },
+    { "source": "/ideias", "destination": "/html/ideias.html" },
+    { "source": "/calendario", "destination": "/html/calendario.html" }
+  ]
+}
